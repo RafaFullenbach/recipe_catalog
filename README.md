@@ -5,10 +5,16 @@ O objetivo desse projeto é um teste para a vaga back-end da empresa Biox, o pro
 
 ### Recipes route
 
+#### url hosting
+
+deploy feito pelo render em:
+
+https://recipe-catalog-bn2t.onrender.com
+
 #### post method
 
 ```http
-  POST /localhost:3000/recipes
+  POST https://recipe-catalog-bn2t.onrender.com/recipes
 
  {
 	"title": "Título da receita",
@@ -20,13 +26,13 @@ O objetivo desse projeto é um teste para a vaga back-end da empresa Biox, o pro
 #### get index method
 
 ```http
-  GET /localhost:3000/recipes
+  GET https://recipe-catalog-bn2t.onrender.com/recipes
 ```
 
 #### get show method
 
 ```http
-  GET /localhost:3000/recipes/:id
+  GET https://recipe-catalog-bn2t.onrender.com/recipes
 ```
 
 ## 🔗 Contact
