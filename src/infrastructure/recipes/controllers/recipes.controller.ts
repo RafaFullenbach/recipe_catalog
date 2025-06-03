@@ -1,10 +1,10 @@
 import { Body, Controller, Get, HttpCode, Param, Post } from '@nestjs/common';
-import { CreateRecipeDto } from 'src/application/recipes/dto/CreateRecipeDto';
+import { CreateRecipeDto } from '../../../application/recipes/dto/CreateRecipeDto';
 import { RecipesService } from '../services/recipes.service';
-import { Recipe } from 'src/domain/recipes/entities/Recipe';
-import { ApiResponse } from 'src/application/recipes/response/ApiResponse';
-import { GetRecipeByIdDto } from 'src/application/recipes/dto/GetRecipeByIdDto';
-import { RecipePresenter } from 'src/application/recipes/response/RecipePresenter';
+import { Recipe } from '../../../domain/recipes/entities/Recipe';
+import { ApiResponse } from '../../../application/recipes/response/ApiResponse';
+import { GetRecipeByIdDto } from '../../../application/recipes/dto/GetRecipeByIdDto';
+import { RecipePresenter } from '../../../application/recipes/response/RecipePresenter';
 
 @Controller('recipes')
 export class RecipesController {

@@ -1,9 +1,9 @@
 import { v4 as uuid } from 'uuid';
 import { Inject, Injectable } from '@nestjs/common';
-import { CreateRecipeDto } from 'src/application/recipes/dto/CreateRecipeDto';
-import { Recipe } from 'src/domain/recipes/entities/Recipe';
-import { RECIPES_REPOSITORY } from 'src/domain/recipes/tokens';
-import { RecipesRepository } from 'src/domain/recipes/repositories/recipes-respository.interface';
+import { CreateRecipeDto } from '../../../application/recipes/dto/CreateRecipeDto';
+import { Recipe } from '../../../domain/recipes/entities/Recipe';
+import { RECIPES_REPOSITORY } from '../../../domain/recipes/tokens';
+import { RecipesRepository } from '../../../domain/recipes/repositories/recipes-respository.interface';
 
 @Injectable()
 export class CreateRecipeUseCase {
@@ -21,9 +21,9 @@ export class CreateRecipeUseCase {
             now
         )
 
-        this.recipesRepository.create(recipe);
+        await this.recipesRepository.create(recipe);
 
-        return await recipe;
+        return recipe;
     }
 }
 

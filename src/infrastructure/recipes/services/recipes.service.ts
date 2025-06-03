@@ -1,10 +1,10 @@
 import { CreateRecipeUseCase } from './../../../application/recipes/use-case/CreateRecipeUseCase';
 import { Injectable } from '@nestjs/common';
-import { CreateRecipeDto } from 'src/application/recipes/dto/CreateRecipeDto';
-import { GetRecipeByIdDto } from 'src/application/recipes/dto/GetRecipeByIdDto';
-import { GetRecipeByIdUseCase } from 'src/application/recipes/use-case/GetRecipeByIdUseCase';
-import { ListAllRecipesUseCase } from 'src/application/recipes/use-case/ListAllRecipesUseCase';
-import { Recipe } from 'src/domain/recipes/entities/Recipe';
+import { CreateRecipeDto } from '../../../application/recipes/dto/CreateRecipeDto';
+import { GetRecipeByIdDto } from '../../../application/recipes/dto/GetRecipeByIdDto';
+import { GetRecipeByIdUseCase } from '../../../application/recipes/use-case/GetRecipeByIdUseCase';
+import { ListAllRecipesUseCase } from '../../../application/recipes/use-case/ListAllRecipesUseCase';
+import { Recipe } from '../../../domain/recipes/entities/Recipe';
 
 @Injectable()
 export class RecipesService {

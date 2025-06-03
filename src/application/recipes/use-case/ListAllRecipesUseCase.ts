@@ -1,7 +1,7 @@
 import { Inject, Injectable, NotFoundException } from '@nestjs/common';
-import { RECIPES_REPOSITORY } from 'src/domain/recipes/tokens';
-import { RecipesRepository } from 'src/domain/recipes/repositories/recipes-respository.interface';
-import { Recipe } from 'src/domain/recipes/entities/Recipe';
+import { RECIPES_REPOSITORY } from '../../../domain/recipes/tokens';
+import { RecipesRepository } from '../../../domain/recipes/repositories/recipes-respository.interface';
+import { Recipe } from '../../../domain/recipes/entities/Recipe';
 
 @Injectable()
 export class ListAllRecipesUseCase {

@@ -1,7 +1,7 @@
 import { GetRecipeByIdDto } from './../../../application/recipes/dto/GetRecipeByIdDto';
 import { Injectable } from '@nestjs/common';
-import { Recipe } from 'src/domain/recipes/entities/Recipe';
-import { RecipesRepository } from 'src/domain/recipes/repositories/recipes-respository.interface';
+import { Recipe } from '../../../domain/recipes/entities/Recipe';
+import { RecipesRepository } from '../../../domain/recipes/repositories/recipes-respository.interface';
 
 @Injectable()
 export class InMemoryRecipesRepository implements RecipesRepository {
