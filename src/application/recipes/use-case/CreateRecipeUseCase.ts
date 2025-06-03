@@ -7,14 +7,12 @@ import { RecipesRepository } from 'src/domain/recipes/repositories/recipes-respo
 
 @Injectable()
 export class CreateRecipeUseCase {
-    constructor(private readonly recipesRepository:RecipesRepository){}
+    constructor(@Inject(RECIPES_REPOSITORY) private readonly recipesRepository:RecipesRepository){}
 
-    @Inject(RECIPES_REPOSITORY)
-    
-    async execute(newRecipe:CreateRecipeDto){
+    async execute(newRecipe:CreateRecipeDto):Promise<Recipe>{
         const now = new Date();
 
-        const recipe = new Recipe(
+        const recipe:Recipe = new Recipe(
             uuid(),
             newRecipe.title,
             newRecipe.description,
@@ -23,7 +21,9 @@ export class CreateRecipeUseCase {
             now
         )
 
-        await this.recipesRepository.create(recipe);
+        this.recipesRepository.create(recipe);
+
+        return await recipe;
     }
 }
 
